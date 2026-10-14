@@ -110,28 +110,45 @@
     margin:6px 0;
     align-items: center;
 }
-.left{
-    width:35%;
-    background-color:midnightblue;
-    padding:17px;
+
+
+.left {
+    width: 35%;
+    min-width: 0;
+    min-height: 100vh;
+    background-color: midnightblue;
+    padding: 17px;
+    flex-shrink: 0;
 }
+
 .profile-box span{
     color:green;
 }
 *{
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
-    height:auto;
-    width:100%;
-    margin:0;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    align-items: stretch;
 }
-.right{
-    width:65%;
-    padding:30px;
-    background:white;
+
+.right {
+    width: 65%;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 30px;
+    background: white;
+    flex: 1;
 }
+
 .about h1{
     font-size:23px;
     font-family:Arial;
@@ -233,12 +250,13 @@ body{
     margin-right:5px;
     font-size:18px;
 }
+
 @media screen and (max-width: 768px) {
 
     body {
-        display: flex;
         flex-direction: column;
         width: 100%;
+        min-height: 100vh;
         overflow-x: hidden;
     }
 
@@ -246,8 +264,17 @@ body{
     .right {
         width: 100%;
         min-width: 0;
+        flex: none;
         padding: 15px;
-        box-sizing: border-box;
+    }
+
+    .left {
+        min-height: auto;
+    }
+
+    .right {
+        min-height: auto;
+        padding: 20px 15px;
     }
 
     .profile {
@@ -258,7 +285,7 @@ body{
     }
 
     .profile-box h1 {
-        font-size: 22px;
+        font-size: clamp(18px, 5vw, 22px);
         margin-left: 0;
         text-align: center;
         letter-spacing: 1px;
@@ -269,7 +296,6 @@ body{
         font-size: 20px;
         margin-left: 0;
         text-align: center;
-        overflow-wrap: anywhere;
     }
 
     .profile-box hr {
@@ -280,17 +306,22 @@ body{
     .about p,
     .Education p,
     .internships p {
+        font-size: 14px;
+        line-height: 1.5;
         overflow-wrap: anywhere;
-    }
-
-    .right {
-        padding: 20px 15px;
     }
 
     .about h1,
     .Education h1,
     .internships h1 {
+        font-size: 19px;
         max-width: 100%;
         overflow-wrap: anywhere;
+    }
+
+    .Education h2,
+    .internships h2 {
+        font-size: 16px;
+        line-height: 1.4;
     }
 }
