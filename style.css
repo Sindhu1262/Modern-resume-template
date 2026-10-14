@@ -1,0 +1,298 @@
+.profile{
+    width:160px;
+    height: 160px;
+    border-radius:50px;
+    object-fit: cover;
+    border:2px dashed skyblue;
+    box-shadow:1px 1px 2px skyblue;
+    margin-top: 10px;
+    margin-left: 150px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+.profile-box h1{
+    color:white;
+    font-size :25px;
+    font-family:Arial;
+    margin-left:10px;
+    letter-spacing: 3px;
+    margin-top:10px;
+    margin-bottom:8px;
+}
+.profile-box h2{
+    color:white;
+    margin-left:100px;
+    margin-top: 8px;
+    font-size:25px;
+    font-family:Arial;
+}
+.profile-box hr{
+    border: 2px solid slategray;
+    margin:1px;
+    margin-bottom:1px;
+    width:96%;
+    margin-left:4px;
+}
+.skills{
+    margin-left:5px;
+}
+.skills h3{
+    color:skyblue;
+    font-size:18px;
+    font-family:Arial;
+    margin-left:5px;
+}
+.skills ul{
+    list-style:none;
+    padding:0;
+}
+.skills li{
+    background:steelblue;
+    color:white;
+    padding:6px 14px;
+    border-radius: 20px;
+    font-size:13px;
+    margin:5px 6px 5px 0;
+    margin-left:5px;
+    display: inline-block;
+    margin-top:1px;
+}
+.languages{
+    margin-left:5px;
+}
+.languages h3{
+    color:skyblue;
+    margin-left:5px;
+    font-size:18px;
+    font-family:Arial;
+}
+.languages ul{
+    list-style:none;
+    color:white;
+    padding:0;
+    margin:0;
+    margin-left: 5px;
+}
+.languages li{
+    color:white;
+    margin-left:5px;
+    margin:6px 0;
+    display: flex;
+    align-items:center;
+}
+.languages li::before{
+    content:".";
+    color:skyblue;
+    margin-right:10px;
+    font-size:18px;
+}
+.languages li span{
+    display:inline-block;
+    width:80px;
+}
+.Interests {
+    margin-left:5px;
+}
+.Interests h3 {
+    color:skyblue;
+    font-size:18px;
+    margin-left: 5px;
+    font-family:Arial;
+}
+.Interests ul {
+    list-style:circle;
+    color:white;
+    margin-left:2px;
+    list-style: circle;
+}
+.Interests li { 
+    color:white;
+    margin-left:2px;
+    margin:6px 0;
+    align-items: center;
+}
+.left{
+    width:35%;
+    background-color:midnightblue;
+    padding:17px;
+    min-height: 100vh;
+}
+.profile-box span{
+    color:green;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height:100vh;
+    width:100%;
+    margin:0;
+}
+.right{
+    width:65%;
+    padding:30px;
+    background:white;
+}
+.about h1{
+    font-size:23px;
+    font-family:Arial;
+    color:green;
+    margin-left:3px;
+    margin-top:5px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position:relative;
+    display:inline-block;
+}
+.about h1::after, .Education h1::after, .internships h1::after{
+    content: "";
+    position:absolute;
+    left:10px;
+    bottom:0;
+    width:80px;
+    height:4px;
+    background-color: skyblue;
+    border-radius:2px;
+    transform: skewX(-35deg);
+}
+.about p{
+    color:black;
+    font-size:19px;
+    margin-left:1px;
+    margin-top:2px;
+    margin:0;
+    margin-bottom:o;
+    text-indent: 40px;
+    text-align:justify;
+}
+.about-exctection{
+    margin-top:10px;
+    padding:0;
+    margin-bottom:2px;
+    font-size:16px;
+}
+.about-exctection p{
+    font-family:Arial;
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+.Education h1{
+    color:green;
+    margin-top:25px;
+    margin-left:3px;
+    font-size:23px;
+    font-family:Arial;
+    margin-bottom:4px;
+    padding-bottom: 10px;
+    position: relative;
+    display:inline-block;
+}
+.Education h2{
+    font-size:20px;
+    margin-top:8px;
+    margin-left:3px;
+    margin-bottom:0;
+}
+.Education h3{
+    margin-top:2px;
+    margin:0px;
+    margin-left:3px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Education h3 span{
+    margin:o 2px;
+}
+.Education p{
+    font-size:18px; margin-top:6px;
+    margin-left:3px;
+    text-align:left;
+    margin-right:5px;
+    word-spacing:normal;
+    margin-bottom:0;
+}
+.internships h1{
+    font-size:23px;
+    color:green;
+    font-family:Arial;
+    margin-left:3px;
+    margin-top:25px;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.internships h2{
+    font-size:20px;
+    margin-bottom:0;
+    margin-left:3px;
+    margin-top:0;
+}
+.internships p{
+    margin-left:3px;
+    margin-top:3px;
+    text-align:left;
+    margin-right:5px;
+    font-size:18px;
+}
+@media screen and (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .profile {
+        display: block;
+        width: 140px;
+        height: 140px;
+        margin: 10px auto;
+    }
+
+    .profile-box h1 {
+        font-size: 22px;
+        margin-left: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-box h2 {
+        font-size: 20px;
+        margin-left: 0;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-box hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .about p,
+    .Education p,
+    .internships p {
+        overflow-wrap: anywhere;
+    }
+
+    .right {
+        padding: 20px 15px;
+    }
+
+    .about h1,
+    .Education h1,
+    .internships h1 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
