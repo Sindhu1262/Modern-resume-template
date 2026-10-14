@@ -1,2 +1,12 @@
-# Modern-resume-template
-A clean, modern &amp; responsive resume portfolio template built with HTML &amp; CSS. Features dark sidebar layout, skills, education and key competencies sections.
+# Professional Resume Portfolio - Modern Template
+
+A modern, professional resume/portfolio template with a clean two-column design.
+
+### Features
+- Professional dark sidebar with profile photo
+- Skills & Languages section
+- About Me, Education & Key Competencies
+- Fully Responsive & Print-Friendly
+
+### Tech Stack
+- HTML5, CSS3
