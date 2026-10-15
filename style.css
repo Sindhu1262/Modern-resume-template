@@ -116,6 +116,7 @@
     width: 35%;
     min-width: 0;
     min-height: 100vh;
+    height: auto;
     background-color: midnightblue;
     padding: 17px;
     flex-shrink: 0;
@@ -137,6 +138,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;
     align-items: stretch;
 }
 
@@ -144,6 +146,7 @@ body {
     width: 65%;
     min-width: 0;
     min-height: 100vh;
+    height: auto;
     padding: 30px;
     background: white;
     flex: 1;
@@ -177,7 +180,7 @@ body {
     margin-left:1px;
     margin-top:2px;
     margin:0;
-    margin-bottom:o;
+    margin-bottom:0;
     text-indent: 40px;
     text-align:justify;
 }
@@ -217,7 +220,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .Education h3 span{
-    margin:o 2px;
+    margin:0 2px;
 }
 .Education p{
     font-size:18px; margin-top:6px;
@@ -253,27 +256,36 @@ body {
 
 @media screen and (max-width: 768px) {
 
+    html,
     body {
-        flex-direction: column;
         width: 100%;
-        min-height: 100vh;
+        min-height: 100%;
+        height: auto;
         overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .left,
     .right {
         width: 100%;
         min-width: 0;
+        min-height: auto;
+        height: auto;
         flex: none;
-        padding: 15px;
+        box-sizing: border-box;
     }
 
     .left {
-        min-height: auto;
+        padding: 15px;
     }
 
     .right {
-        min-height: auto;
         padding: 20px 15px;
     }
 
@@ -323,5 +335,6 @@ body {
     .internships h2 {
         font-size: 16px;
         line-height: 1.4;
+        overflow-wrap: anywhere;
     }
 }
