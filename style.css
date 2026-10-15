@@ -304,6 +304,7 @@ body {
         margin: 10px auto;
         border-radius: 35px;
         object-fit: cover;
+        margin-left:20px;
     }
 
     .profile-box h1 {
