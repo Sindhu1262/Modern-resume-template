@@ -258,99 +258,141 @@ body {
     font-size:18px;
 }
 
+
 @media screen and (max-width: 768px) {
 
     html,
     body {
         width: 100%;
-        min-height: 100%;
+        min-height: 100vh;
         height: auto;
+        margin: 0;
+        padding: 0;
         overflow-x: hidden;
-        overflow-y: auto;
     }
 
-    
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-
-    
-.left {
-    width: 35%;
-    min-width: 0;
-    min-height: 100vh;
-    height: auto;
-    flex: 0 0 35%;
-    padding: 15px 10px;
-}
-
-.right {
-    width: 65%;
-    min-width: 0;
-    min-height: 100vh;
-    height: auto;
-    flex: 0 0 65%;
-    padding: 20px 12px;
-}
-
+    body {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
 
     .left {
-        padding: 15px;
+        width: 35%;
+        min-width: 0;
+        flex: 0 0 35%;
+        min-height: 100vh;
+        height: auto;
+        padding: 15px 10px;
     }
 
     .right {
-        padding: 20px 15px;
+        width: 65%;
+        min-width: 0;
+        flex: 0 0 65%;
+        min-height: 100vh;
+        height: auto;
+        padding: 20px 12px;
     }
 
     .profile {
         display: block;
-        width: 140px;
-        height: 140px;
+        width: 100%;
+        max-width: 140px;
+        height: auto;
+        aspect-ratio: 1 / 1;
         margin: 10px auto;
+        border-radius: 35px;
+        object-fit: cover;
     }
 
     .profile-box h1 {
-        font-size: clamp(18px, 5vw, 22px);
-        margin-left: 0;
+        font-size: clamp(12px, 3.5vw, 22px);
+        margin: 10px 0;
         text-align: center;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         overflow-wrap: anywhere;
     }
 
     .profile-box h2 {
-        font-size: 20px;
-        margin-left: 0;
+        font-size: clamp(13px, 3.5vw, 20px);
+        margin: 8px 0;
         text-align: center;
+        overflow-wrap: anywhere;
     }
 
     .profile-box hr {
         width: 100%;
+        margin: 10px 0;
+    }
+
+    .skills {
         margin-left: 0;
     }
 
-    .about p,
-    .Education p,
-    .internships p {
-        font-size: 14px;
-        line-height: 1.5;
+    .skills h3,
+    .languages h3,
+    .Interests h3 {
+        font-size: clamp(12px, 2.8vw, 18px);
+        margin-left: 3px;
+    }
+
+    .skills li {
+        display: inline-block;
+        max-width: 100%;
+        font-size: clamp(10px, 2.5vw, 13px);
+        padding: 5px 8px;
+        margin: 4px 0;
         overflow-wrap: anywhere;
+    }
+
+    .languages li {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: clamp(10px, 2.5vw, 14px);
+        overflow-wrap: anywhere;
+    }
+
+    .languages li span {
+        width: auto;
+        margin-right: 5px;
     }
 
     .about h1,
     .Education h1,
     .internships h1 {
-        font-size: 19px;
+        font-size: clamp(15px, 3.5vw, 23px);
         max-width: 100%;
         overflow-wrap: anywhere;
     }
 
+    .about p,
+    .Education p,
+    .internships p {
+        font-size: clamp(11px, 2.7vw, 18px);
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+        word-break: normal;
+        text-align: left;
+    }
+
     .Education h2,
     .internships h2 {
-        font-size: 16px;
+        font-size: clamp(12px, 3vw, 20px);
         line-height: 1.4;
         overflow-wrap: anywhere;
     }
+
+    .Education h3 {
+        font-size: clamp(12px, 2.8vw, 17px);
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .about-exctection,
+    .about-exctection p {
+        font-size: clamp(11px, 2.5vw, 16px);
+        line-height: 1.4;
+    }
 }
+
