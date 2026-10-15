@@ -112,15 +112,17 @@
 }
 
 
+
 .left {
     width: 35%;
     min-width: 0;
     min-height: 100vh;
     height: auto;
     background-color: midnightblue;
-    padding: 17px;
-    flex-shrink: 0;
+    padding: 25px;
+    flex: 0 0 35%;
 }
+
 
 .profile-box span{
     color:green;
@@ -142,6 +144,7 @@ body {
     align-items: stretch;
 }
 
+
 .right {
     width: 65%;
     min-width: 0;
@@ -149,8 +152,9 @@ body {
     height: auto;
     padding: 30px;
     background: white;
-    flex: 1;
+    flex: 0 0 65%;
 }
+
 
 .about h1{
     font-size:23px;
@@ -265,21 +269,33 @@ body {
         overflow-y: auto;
     }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
+    
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 
-    .left,
-    .right {
-        width: 100%;
-        min-width: 0;
-        min-height: auto;
-        height: auto;
-        flex: none;
-        box-sizing: border-box;
-    }
+
+    
+.left {
+    width: 35%;
+    min-width: 0;
+    min-height: 100vh;
+    height: auto;
+    flex: 0 0 35%;
+    padding: 15px 10px;
+}
+
+.right {
+    width: 65%;
+    min-width: 0;
+    min-height: 100vh;
+    height: auto;
+    flex: 0 0 65%;
+    padding: 20px 12px;
+}
+
 
     .left {
         padding: 15px;
